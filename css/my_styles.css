@@ -18,8 +18,22 @@ body{
 }
 
 p{
-    font-size: 17px;
+    font-size: 18px;
+    text-align: justify;
 }
 h1{
     font-size: 25px;
+    text-align: center;
+}
+
+.icon-qr{
+    width: 80px;
+    margin: 3% auto;
+    display: block;
+}
+#qrcode{
+    display: block;
+    width: 70px;
+    margin: 2% auto;
+    margin-bottom: 7%;
 }
