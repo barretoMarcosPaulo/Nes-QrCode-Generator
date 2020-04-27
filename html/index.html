@@ -5,28 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="../css/my_styles.css" rel="stylesheet" />
+    <script src="../lib_qrcode_js/qrcode.min.js"></script>
     <title>QR CODE - Retrô</title>
 </head>
 <body>
     <div id="container">
         
-        <h1> <i class="nes-mario"></i> QR CODE RETRÔ</h1>
+        <h1> QR CODE RETRÔ</h1>
+        <img src="../img/qr.png" class="icon-qr">
+        
 
         <section class="nes-container with-title">
             <h3 class="title title-box">Sobre</h3>
             <p>
                 <span class="nes-text is-error">Noops!</span> 
                 Este projeto não é somente um simples gerador de QrCodes, <strong>não mesmo.</strong>
-                Este projeto é um super gerador de QrCode com visual nostálgico, lindo e <strong>Retrô.</strong>
+                Este projeto é um super gerador de códigos QR com visual nostálgico,lindo e <strong>Retrô.</strong>
             </p>
             <i class="nes-icon is-large heart"></i>
+            <i class="nes-icon is-large heart"></i>
+            <i class="nes-icon is-large is-half heart"></i>
         </section>
 
         <br>
         
+        <i class="nes-ash"></i>
+        <i class="nes-pokeball"></i>
+        <i class="nes-bulbasaur"></i>
+        
+        <br>
+        <br>
 
+        <section class="nes-container with-title">
+            <h3 class="title title-box">Código QR</h3>
+            <p>
+                <span class="nes-text is-error">O QR Code </span>
+                é basicamente um novo código de barras em 2D 
+                (o antigo código trabalha com apenas uma dimensão, a horizontal,
+                e o QR Code utiliza códigos com informações tanto no plano 
+                horizontal como na vertical)-
+                <a target="_blank" href="https://www.techtudo.com.br/dicas-e-tutoriais/noticia/2011/03/um-pequeno-guia-sobre-o-qr-code-uso-e-funcionamento.html">
+                    TecTudo
+                </a>
+            </p>
+            
+            <br>            
+        </section>
+
+        <br>
+
+        <section class="nes-container is-dark">
+            <section class="message-list">
+                <section class="message -left">
+                    <!-- Balloon -->
+                    <i class="nes-ash"></i>
+                    <div class="nes-balloon from-left is-dark">
+                        <p>Para de enrolar, quero criar meu código!!! </p>
+                    </div>
+                </section>
+
+
+                <section class="message -right">
+                    <!-- Balloon -->
+                    <div class="nes-balloon from-right is-dark">
+                        <p>Aqui oh, só informar os dados logo abaixo</p>
+                    </div>
+                    <i class="nes-kirby"></i>
+                </section>
+
+
+            </section>
+        </section>
+
+        <br>
+
+        <label for="textarea_field">Gerar Meu Código Qr</label>
+        <textarea id="textarea_field" class="nes-textarea" placeholder="informe o conteúdo que deseja">
+        </textarea>
+        <button type="button" class="nes-btn is-warning" onclick="generate()">Gerar</button>
 
     </div>
     
+    <div id="qrcode"></div>
+
+    <script type="text/javascript">
+        function generate(){
+            var qrcode = new QRCode("qrcode");
+            let content = document.getElementById('textarea_field').value
+            qrcode.makeCode(content);
+        }
+    </script>
+
 </body>
 </html>
