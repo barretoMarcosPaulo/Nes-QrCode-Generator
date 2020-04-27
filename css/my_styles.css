@@ -1,0 +1,25 @@
+@import url('/home/marcos/node_modules/nes.css/css/nes.css');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body{
+    /* font-family: 'VT323'; */
+    font-family: 'Press Start 2P' !important;
+}
+
+
+#container{
+    width: 80%; 
+    margin: 5% auto;
+}
+
+.title-box{
+    font-size: 22px !important;
+}
+
+p{
+    font-size: 17px;
+}
+h1{
+    font-size: 25px;
+}
