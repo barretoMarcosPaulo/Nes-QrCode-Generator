@@ -7,6 +7,9 @@ body{
     font-family: 'Press Start 2P' !important;
 }
 
+a:hover{
+    text-decoration: none;
+}
 
 #container{
     width: 80%; 
