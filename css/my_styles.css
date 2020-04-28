@@ -33,7 +33,19 @@ h1{
 }
 #qrcode{
     display: block;
-    width: 70px;
-    margin: 2% auto;
     margin-bottom: 7%;
+}
+#qrcode img{
+    margin: 0 auto;
+}
+
+.btn-download{
+    margin: 0 auto;
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.link_download:hover{
+    text-decoration: none;
 }
