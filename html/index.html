@@ -80,20 +80,49 @@
         <br>
 
         <label for="textarea_field">Gerar Meu Código Qr</label>
-        <textarea id="textarea_field" class="nes-textarea" placeholder="informe o conteúdo que deseja">
-        </textarea>
+        <textarea id="textarea_field" class="nes-textarea"  placeholder="informe o conteúdo que deseja"></textarea>
         <button type="button" class="nes-btn is-warning" onclick="generate()">Gerar</button>
 
+        <div id="qrcode"></div>
+
     </div>
-    
-    <div id="qrcode"></div>
+    <a href="" class="link_download" id="link_download">
+        <button type="button" id="button_download" class="nes-btn is-success btn-download hidden">Download</button>
+    </a>
 
     <script type="text/javascript">
+        
         function generate(){
+            clearQrCode()
+            
             var qrcode = new QRCode("qrcode");
             let content = document.getElementById('textarea_field').value
-            qrcode.makeCode(content);
+            qrcode.makeCode(content)
+
+            document.getElementById('button_download').className="nes-btn is-success btn-download"
+            
+            prepareDownload()
         }
+
+
+        function clearQrCode() {
+            document.getElementById('qrcode').remove()
+            
+            let container = document.getElementById('container')
+            let div_qrCode = document.createElement('div')
+            div_qrCode.id="qrcode"
+            
+            container.appendChild(div_qrCode)
+        }
+
+        function prepareDownload(){
+            let canvas = document.getElementsByTagName('canvas')
+
+            let link = document.getElementById('link_download')
+            link.download="qrCode.png"
+            link.href= canvas[0].toDataURL()
+        }
+
     </script>
 
 </body>
