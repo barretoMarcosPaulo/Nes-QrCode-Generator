@@ -49,3 +49,24 @@ h1{
 .link_download:hover{
     text-decoration: none;
 }
+
+.box-validate{
+    width: 80%; 
+    margin: 5% auto;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px red; */
+}
+
+.box-validate-1{
+    /* border: solid 1px red; */
+    display: inline;
+    /* position: absolute; */
+}
+
+.box-validate-2{
+    width: 70%;
+    justify-content: center;
+    /* border: solid 1px red; */
+    margin-left: 20%;
+}

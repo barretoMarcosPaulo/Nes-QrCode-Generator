@@ -83,12 +83,24 @@
         <textarea id="textarea_field" class="nes-textarea"  placeholder="informe o conteúdo que deseja"></textarea>
         <button type="button" class="nes-btn is-warning" onclick="generate()">Gerar</button>
 
-        <div id="qrcode"></div>
+        <div id="qrcode" style="position: relative;"></div>
 
     </div>
+    
     <a href="" class="link_download" id="link_download">
         <button type="button" id="button_download" class="nes-btn is-success btn-download hidden">Download</button>
     </a>
+
+    <div class="box-validate hidden" id="box-validate">
+        <div class="box-validate-1">
+            <i class="nes-ash icon-cel"></i>
+            <i class="nes-smartphone icon-cel"></i>
+        </div>
+        <div class="box-validate-2">
+            <p>Não esqueça de validar seu QrCode gerado em algum app no seu smartphone ou pc. Confira se está tudo ok!</p>
+        </div>
+    </div>
+
 
     <script type="text/javascript">
         
@@ -100,6 +112,7 @@
             qrcode.makeCode(content)
 
             document.getElementById('button_download').className="nes-btn is-success btn-download"
+            document.getElementById('box-validate').className="box-validate"
             
             prepareDownload()
         }
